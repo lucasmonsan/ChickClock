@@ -1,0 +1,29 @@
+.w-full {width: 100vw !important;}
+.w-100 {width: 100% !important;}
+.w-90 {width: 90% !important;}
+.w-75 {width: 75% !important;}
+.w-50 {width: 50% !important;}
+.w-xxxl {width: calc(var(--base) * 3) !important;}
+.w-xxl {width: calc(var(--base) * 2.5) !important;}
+.w-xl {width: calc(var(--base) * 2) !important;}
+.w-lg {width: calc(var(--base) * 1.5) !important;}
+.w-md {width: var(--base) !important;}
+.w-sm {width: calc(var(--base) * 0.75) !important;}
+.w-xs {width: calc(var(--base) * 0.5) !important;}
+.w-xxs {width: calc(var(--base) * 0.25) !important;}
+.w-auto {width: auto;}
+
+.max-w-xxs {max-width: calc(var(--base) * 0.25) !important;}
+
+/*********************************************************/
+
+._w-full {width: 100vw;}
+._w-100 {width: 100%;}
+._w-90 {width: 90%;}
+._w-xxxl {width: calc(var(--base) * 3);}
+._w-xxl {width: calc(var(--base) * 2.5);}
+._w-xl {width: calc(var(--base) * 2);}
+._w-lg {width: calc(var(--base) * 1.5);}
+._w-md {width: var(--base);}
+._w-sm {width: calc(var(--base) * 0.75);}
+._w-xs {width: calc(var(--base) * 0.5);}

@@ -1,0 +1,27 @@
+.h-auto {height: auto !important;}
+.h-full {height: 100dvh !important;}
+.h-100 {height: 100% !important;}
+.h-90 {height: 90% !important;}
+.h-50 {height: 50% !important;}
+.h-xxxl {height: calc(var(--base) * 3) !important;}
+.h-xxl {height: calc(var(--base) * 2.5) !important;}
+.h-xl {height: calc(var(--base) * 2) !important;}
+.h-lg {height: calc(var(--base) * 1.5) !important;}
+.h-md {height: var(--base) !important;}
+.h-sm {height: calc(var(--base) * 0.75) !important;}
+.h-xs {height: calc(var(--base) * 0.5) !important;}
+
+.max-h-xxs {max-height: calc(var(--base) * 0.25) !important;}
+
+/**********************************************************/
+
+._h-auto {height: auto;}
+._h-full {height: 100dvh;}
+._h-100 {height: 100%;}
+._h-xxxl {height: calc(var(--base) * 3);}
+._h-xxl {height: calc(var(--base) * 2.5);}
+._h-xl {height: calc(var(--base) * 2);}
+._h-lg {height: calc(var(--base) * 1.5);}
+._h-md {height: var(--base);}
+._h-sm {height: calc(var(--base) * 0.75);}
+._h-xs {height: calc(var(--base) * 0.5);}

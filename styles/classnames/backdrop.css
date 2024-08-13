@@ -1,0 +1,1 @@
+.backdrop-blur-sm {backdrop-filter: blur(calc(var(--base) * 0.75));}

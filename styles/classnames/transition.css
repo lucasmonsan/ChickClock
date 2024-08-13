@@ -1,0 +1,13 @@
+.fast { transition: opacity var(--fast), top var(--fast), color var(--fast), transform var(--fast), background-color var(--fast) !important; }
+.normal { transition: opacity var(--normal), top var(--normal), color var(--normal), transform var(--fast), background-color var(--normal) !important; }
+.slow { transition: opacity var(--slow), top var(--slow), color var(--slow), transform var(--fast), background-color var(--slow) !important; }
+
+.checkbox-animation {transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease !important;}
+
+/*************************************************/
+
+._fast { transition: opacity var(--fast), top var(--fast), color var(--fast), transform var(--fast), background-color var(--fast) ; }
+._normal { transition: opacity var(--normal), top var(--normal), color var(--normal), transform var(--normal), background-color var(--normal) ; }
+._slow { transition: opacity var(--slow), top var(--slow), color var(--slow), transform var(--slow), background-color var(--slow) ; }
+
+._checkbox-animation {transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;}

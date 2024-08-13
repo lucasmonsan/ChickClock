@@ -1,0 +1,16 @@
+.gap-xl {gap: calc(var(--base) * 2) !important;}
+.gap-lg {gap: calc(var(--base) * 1.5) !important;}
+.gap-md {gap: var(--base) !important;}
+.gap-sm {gap: calc(var(--base) * 0.75) !important;}
+.gap-xs {gap: calc(var(--base) * 0.5) !important;}
+.gap-xxs {gap: calc(var(--base) * 0.25) !important;}
+.gap-xxxs {gap: calc(var(--base) * 0.125) !important;}
+
+/**********************************************************/
+
+._gap-xl {gap: calc(var(--base) * 2);}
+._gap-lg {gap: calc(var(--base) * 1.5);}
+._gap-md {gap: var(--base);}
+._gap-sm {gap: calc(var(--base) * 0.75);}
+._gap-xs {gap: calc(var(--base) * 0.5);}
+._gap-xxs {gap: calc(var(--base) * 0.25);}

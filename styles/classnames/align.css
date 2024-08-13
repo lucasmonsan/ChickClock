@@ -1,0 +1,13 @@
+.ai-start {align-items: flex-start !important;}
+.ai-center {align-items: center !important;}
+.ai-end {align-items: flex-end !important;}
+
+.ac-center {align-content: center !important;}
+.ac-end {align-content: flex-end !important;}
+
+/*******************************************************/
+
+._ai-center {align-items: center;}
+._ai-end {align-items: flex-end;}
+
+._ac-center {align-content: center;}

@@ -1,0 +1,12 @@
+.jc-start {justify-content: flex-start !important;}
+.jc-center {justify-content: center !important;}
+.jc-end {justify-content: flex-end !important;}
+.jc-space-between {justify-content: space-between !important;}
+.jc-space-around {justify-content: space-around !important;}
+
+/*********************************************************/
+
+._jc-center {justify-content: center;}
+._jc-end {justify-content: flex-end;}
+._jc-space-between {justify-content: space-between;}
+._jc-space-around {justify-content: space-around;}

@@ -1,0 +1,19 @@
+.bottom-0 {bottom: 0 !important;}
+.bottom-xl {bottom: calc(var(--base) * 2) !important;}
+.bottom-lg {bottom: calc(var(--base) * 1.5) !important;}
+.bottom-md {bottom: var(--base) !important;}
+
+.focus-bottom-0:focus-within p {bottom: 0 !important;}
+
+.bottom-100 {bottom: 100% !important;}
+
+/*************************************************/
+
+._bottom-0 {bottom: 0;}
+._bottom-xl {bottom: calc(var(--base) * 2);}
+._bottom-lg {bottom: calc(var(--base) * 1.25);}
+._bottom-md {bottom: var(--base);}
+
+._focus-bottom-0:focus-within p {bottom: 0;}
+
+._bottom-100 {bottom: 100%;}

@@ -1,0 +1,7 @@
+.column {flex-direction: column !important;}
+.wrap {flex-wrap: wrap !important;}
+
+/********************************************************/
+
+._column {flex-direction: column;}
+._wrap {flex-wrap: wrap;}

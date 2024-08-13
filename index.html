@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      * {padding: 0; margin: 0; box-sizing: border-box; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+      html > div {display: none}
+      body {display: flex; flex-direction: column; align-items: center; background-color: var(--bg-color);}
+      @media (max-width: 640px) {div#root {width: 100%; max-width: 420px;}}
+      @media (min-width: 641px) and (max-width: 1340px) {div#root {width: 100%; max-width: 1280px;}}
+      @media (min-width: 1341px) {div#root {width: 100%; max-width: 1920px;}}
+      :root {
+        --base: min(3.75vw,1rem); --header-h: 5rem; --footer-h: calc(var(--base) * 5);
+        --family1: "Orbitron", sans-serif; --family2: "Abel", sans-serif; 
+        --slow: 1s ease-in-out; --normal: 0.5s ease-in-out; --fast: 0.25s ease-in-out;
+        --bg-color: #050505; --text-color: #EFEDEB; --comp-color: #1C1C1C; --border-color: #333333; 
+        --black: #050505;--white: #EFEDEB; --gray: #1C1C1C; --silver: #333333;
+        --purple: #9C4DEB; --green: #2AA363; --red: #DA5050; --yellow: #FCCA46; --orange: #DA822D; 
+        --blue: #1982C4; --brown: #8B4E23; --grayout: #050505bb;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link type="text/css" rel="stylesheet" href="./styles/index.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChickClock</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

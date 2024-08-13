@@ -1,0 +1,19 @@
+{
+	"recommendations": [
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-complete-tag",
+		"steoates.autoimport",
+		"formulahendry.auto-rename-tag",
+		"streetsidesoftware.code-spell-checker-portuguese-brazilian",
+		"streetsidesoftware.code-spell-checker",
+		"naumovs.color-highlight",
+		"wix.vscode-import-cost",
+		"oderwat.indent-rainbow",
+		"tomi.xasnippets",
+		"biomejs.biome",
+		"shan.code-settings-sync",
+		"styled-components.vscode-styled-components",
+		"wilfriedago.vscode-symbols-icon-theme",
+		"moalamri.inline-fold"
+	]
+}

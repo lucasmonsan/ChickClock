@@ -1,0 +1,16 @@
+.z-hide {z-index: -1 !important;} /*hide*/ 
+.z-0 {z-index: 0 !important;} /*bg*/ 
+.z-1 {z-index: 1 !important;} /*base*/
+.z-2 {z-index: 2 !important;} /*header*/
+.z-3 {z-index: 3 !important;} /*footer*/
+.z-4 {z-index: 4 !important;} /*notifications*/
+.z-5 {z-index: 5 !important;} /*loading*/
+
+/***************************************/
+
+._z-0 {z-index: 0;} /*bg*/ 
+._z-1 {z-index: 1;} /*base*/
+._z-2 {z-index: 2;} /*header*/
+._z-3 {z-index: 3;} /*footer*/
+._z-4 {z-index: 4;} /*notifications*/
+._z-5 {z-index: 5;} /*loading*/

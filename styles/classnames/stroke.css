@@ -1,0 +1,11 @@
+.stroke-w-2 {stroke-width: 2 !important;}
+.stroke-white {stroke: var(--white) !important;}
+.stroke-black {stroke: var(--black) !important;}
+.stroke-bg {stroke: var(--bg-color) !important;}
+.stroke-misterLimit-10 {stroke-miterlimit: 10 !important;}
+
+/*************************************************/
+
+._stroke-w-2 {stroke-width: 2;}
+._stroke-white {stroke: var(--white);}
+._stroke-misterLimit-10 {stroke-miterlimit: 10;}

@@ -1,0 +1,9 @@
+.fixed {position: fixed !important;}
+.relative {position: relative !important;}
+.absolute {position: absolute !important;}
+
+/*************************************************/
+
+._fixed {position: fixed;}
+._relative {position: relative;}
+._absolute {position: absolute;}
