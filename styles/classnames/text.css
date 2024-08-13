@@ -1,9 +1,0 @@
-.text-center {text-align: center !important;}
-
-.text-shadow {text-shadow: var(--black) 0px 0px 16px !important;}
-
-/*************************************************************************/
-
-._text-center {text-align: center;}
-
-._text-shadow {text-shadow: var(--black) 0px 0px 16px;}
