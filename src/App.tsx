@@ -1,6 +1,7 @@
 import { Footer } from "./Footer"
 import { useEffect, useState } from "react"
 import { LogoIcon } from "./Icons"
+import "./index.css"
 
 export const App = () => {
 	const finalDate = new Date(2024, 7, 22, 13, 30) // 22 de Agosto de 2024, 13:30
