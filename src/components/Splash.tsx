@@ -22,7 +22,7 @@ export const Splash: FC<SplashProps> = ({ currentScreen }) => {
 
 	return (
 		<section id="Splash" className="z-2 fixed top-0 left-0 flex column ai-center jc-center gap-md w-100 h-100 opacity-0 slow" style={{ backgroundColor: "var(--bg-color)" }}>
-			<LogoIcon style={{ height: "6rem" }} />
+			<LogoIcon style={{ height: "calc(var(--base) * 6)" }} />
 			<h1 className="family2 color-text">ChickClock!</h1>
 		</section>
 	)

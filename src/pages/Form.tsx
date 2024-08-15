@@ -12,7 +12,6 @@ interface FormProps {
 
 export const Form: FC<FormProps> = ({ currentScreen }) => {
 	const [title, setTitle] = useState("")
-	const [description, setDescription] = useState("")
 
 	const arrayYear = useMemo(() => Array.from({ length: 101 }, (_, i) => new Date().getFullYear() + i), [])
 	const [arrayMonth, setArrayMonth] = useState([0])
@@ -89,7 +88,7 @@ export const Form: FC<FormProps> = ({ currentScreen }) => {
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault()
 		if (title) {
-			setLink(`chickclock.surge.sh?t=${title}&dd=${day}&mm=${month}&yyyy=${year}&hh=${hour}&mm=${minute}`)
+			setLink(`chickclock.surge.sh?t=${title}&dd=${day}&mm=${month - 1}&yyyy=${year}&hh=${hour}&mm=${minute}`)
 		} else {
 			alert("Por favor, preencha o título do timer")
 		}
@@ -124,25 +123,23 @@ export const Form: FC<FormProps> = ({ currentScreen }) => {
 	}
 
 	return (
-		<>
-			<form id="Form" className="z-1 top-0 left-0 flex column ai-center jc-center gap-lg w-100 opacity-0 slow" style={{ backgroundColor: "var(--bg-color)" }} onSubmit={handleSubmit}>
-				<h1 className="family1 color-text padd-xs">Novo Timer</h1>
+		<form id="Form" className="z-1 top-0 left-0 flex column ai-center jc-center gap-lg w-100 opacity-0 slow" style={{ backgroundColor: "var(--bg-color)" }} onSubmit={handleSubmit}>
+			<h1 className="family1 color-text padd-xs">Novo Timer</h1>
 
-				<Input placeholder="Nome" maxLength={40} value={title} onChange={(e) => setTitle(e.target.value)} />
+			<Input placeholder="Nome" maxLength={40} value={title} onChange={(e) => setTitle(e.target.value)} />
 
-				<div className="flex jc-center ai-center gap-md w-100">
-					<Dropdown options={arrayDays} placeholder="Dia" value={day} onChange={(e) => setDay(Number(e.target.value))} className="w-20" />
-					<Dropdown options={arrayMonth} placeholder="Mês" value={month} onChange={(e) => setMonth(Number(e.target.value))} className="w-50" />
-					<Dropdown options={arrayYear} placeholder="Ano" value={year} onChange={(e) => setYear(Number(e.target.value))} className="w-30" />
-				</div>
+			<div className="flex jc-center ai-center gap-md w-100">
+				<Dropdown options={arrayDays} placeholder="Dia" value={day} onChange={(e) => setDay(Number(e.target.value))} className="w-20" />
+				<Dropdown options={arrayMonth} placeholder="Mês" value={month} onChange={(e) => setMonth(Number(e.target.value))} className="w-50" />
+				<Dropdown options={arrayYear} placeholder="Ano" value={year} onChange={(e) => setYear(Number(e.target.value))} className="w-30" />
+			</div>
 
-				<div className="flex jc-center ai-center gap-lg w-100">
-					<Dropdown options={filteredHours} placeholder="Hora" value={hour} onChange={(e) => setHour(Number(e.target.value))} className="w-100" />
-					<Dropdown options={filteredMinutes} placeholder="Minuto" value={minute} onChange={(e) => setMinute(Number(e.target.value))} className="w-100" />
-				</div>
+			<div className="flex jc-center ai-center gap-lg w-100">
+				<Dropdown options={filteredHours} placeholder="Hora" value={hour} onChange={(e) => setHour(Number(e.target.value))} className="w-100" />
+				<Dropdown options={filteredMinutes} placeholder="Minuto" value={minute} onChange={(e) => setMinute(Number(e.target.value))} className="w-100" />
+			</div>
 
-				<Button type="submit">Criar Timer</Button>
-			</form>
+			<Button type="submit">Criar Timer</Button>
 
 			<div className={`w-100 padd-xs ${link !== "" ? "scale-1 opacity-1" : "scale-0 opacity-0"}`} />
 
@@ -154,12 +151,12 @@ export const Form: FC<FormProps> = ({ currentScreen }) => {
 					<p id="Link" className={`w-100 fs-sm bold family1 color-bg break-all`}>
 						{link}
 					</p>
-					<Button onClick={() => copyLink()} className="relative flex ai-center jc-center h-100" style={{ width: "3rem", height: "2.5rem" }}>
-						<ClipboardIcon className={`absolute fast ${copied === true ? "scale-0 opacity-0" : "scale-1 opacity-1"}`} style={{ width: "1.5rem", height: "1.5rem" }} />
-						<CheckIcon className={`absolute fast ${copied === true ? "scale-1 opacity-1" : "scale-0 opacity-0"}`} style={{ width: "2rem", height: "2rem" }} />
+					<Button onClick={() => copyLink()} className="relative flex ai-center jc-center h-100" style={{ width: "calc(var(--base) * 3)", height: "calc(var(--base) * 2.5)" }}>
+						<ClipboardIcon className={`absolute fast ${copied === true ? "scale-0 opacity-0" : "scale-1 opacity-1"}`} style={{ width: "calc(var(--base) * 1.5)", height: "calc(var(--base) * 1.5)" }} />
+						<CheckIcon className={`absolute fast ${copied === true ? "scale-1 opacity-1" : "scale-0 opacity-0"}`} style={{ width: "calc(var(--base) * 2)", height: "calc(var(--base) * 2)" }} />
 					</Button>
 				</div>
 			</div>
-		</>
+		</form>
 	)
 }

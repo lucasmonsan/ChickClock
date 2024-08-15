@@ -37,7 +37,7 @@ export const App = () => {
 
 			<Splash currentScreen={currentScreen} />
 
-			<ClockFooter finalDate={finalDate} />
+			<ClockFooter currentScreen={currentScreen} />
 		</main>
 	)
 }

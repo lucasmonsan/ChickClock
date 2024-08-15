@@ -1,21 +1,16 @@
-import { FC, useEffect, useState } from "react"
+import { FC, useEffect } from "react"
 
 interface HeaderProps {
 	currentScreen: string
 }
 
 export const Header: FC<HeaderProps> = ({ currentScreen }) => {
-	const [title, setTitle] = useState("")
-
 	useEffect(() => {
 		const header = document.getElementById("Header")
 
 		if (!header) return
 
-		setTimeout(() => {
-			header.style.opacity = "0"
-			setTimeout(() => (header.style.opacity = "1"), 250)
-		}, 500)
+		if (currentScreen !== "splash") header.style.opacity = "1"
 	}, [currentScreen])
 
 	return (

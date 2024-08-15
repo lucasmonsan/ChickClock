@@ -15,6 +15,12 @@ export const Timer: FC<TimerProps> = ({ title, currentScreen, finalDate }) => {
 	})
 
 	useEffect(() => {
+		// Verifica se a data final é válida
+		if (isNaN(finalDate.getTime())) {
+			console.error("Invalid finalDate provided")
+			return
+		}
+
 		const interval = setInterval(() => {
 			const now = new Date()
 			const timeDiff = finalDate.getTime() - now.getTime()
@@ -28,6 +34,7 @@ export const Timer: FC<TimerProps> = ({ title, currentScreen, finalDate }) => {
 				setRemainingTime({ days, hours, minutes, seconds })
 			} else {
 				setRemainingTime({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+				clearInterval(interval)
 			}
 		}, 1000)
 
@@ -50,11 +57,15 @@ export const Timer: FC<TimerProps> = ({ title, currentScreen, finalDate }) => {
 
 	return (
 		<section id="Timer" className="z-1 flex column ai-center jc-center gap-md w-100 opacity-0 slow">
-			<h1 className="family1 color-text padd-md">{title}</h1>
+			<h1 className="family1 color-text text-center" style={{ fontSize: "calc(var(--base) * 2.5)" }}>
+				{title}
+			</h1>
+
+			<div className="w-100 bg-color" style={{ height: "1px", marginBottom: "calc(var(--base) * 1.5" }} />
 
 			<h2 className="family1 lh-md fs-lg color-text">Faltam</h2>
 
-			<h1 className="family1 color-text" style={{ fontSize: "calc(var(--base) * 6)", lineHeight: "calc(var(--base) * 6)" }}>
+			<h1 className="family1 color-text text-center" style={{ fontSize: "calc(var(--base) * 6)", lineHeight: "calc(var(--base) * 6)" }}>
 				{remainingTime.days} {remainingTime.days === 1 ? "dia" : "dias"}
 			</h1>
 

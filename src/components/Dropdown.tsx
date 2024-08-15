@@ -27,7 +27,7 @@ export const Dropdown: FC<DropdownProps> = ({ value = "", onChange, placeholder,
 			>
 				{options.map((option, index) => (
 					<option key={index} value={option} className="family1">
-						{placeholder === "Mês" ? getMonthName(option) : option}
+						{placeholder === "Mês" ? getMonthName(option) : option.toString().padStart(2, "0")}
 					</option>
 				))}
 			</select>
