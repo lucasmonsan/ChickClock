@@ -32,7 +32,13 @@ export const ClockFooter: FC<FooterProps> = ({ currentScreen }) => {
 
 		if (!footer) return
 
-		if (currentScreen !== "splash") footer.style.opacity = "1"
+		if (currentScreen === "timer") {
+			footer.style.display = "flex"
+			footer.style.opacity = "1"
+		} else {
+			footer.style.opacity = "0"
+			setTimeout(() => (footer.style.display = "none"), 500)
+		}
 	}, [currentScreen])
 
 	return (

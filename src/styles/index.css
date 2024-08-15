@@ -90,6 +90,7 @@
 .input-focus:focus {
   color: var(--color); 
   fill: var(--color); 
+  border-color: var(--color);
 }
 .input-focus:focus ~ label {
   transform: translateY(-50%) scale(0.85);

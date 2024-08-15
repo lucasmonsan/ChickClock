@@ -35,8 +35,8 @@ export const Form: FC<FormProps> = ({ currentScreen }) => {
 		if (!form) return
 
 		if (currentScreen === "form") {
-			form.style.opacity = "1"
 			form.style.display = "flex"
+			form.style.opacity = "1"
 		} else {
 			form.style.opacity = "0"
 			setTimeout(() => (form.style.display = "none"), 500)
@@ -88,7 +88,7 @@ export const Form: FC<FormProps> = ({ currentScreen }) => {
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault()
 		if (title) {
-			setLink(`chickclock.surge.sh?t=${title}&dd=${day}&mm=${month - 1}&yyyy=${year}&hh=${hour}&mm=${minute}`)
+			setLink(`https://chickclock.surge.sh?t=${title}&dd=${day}&mm=${month - 1}&yyyy=${year}&hh=${hour}&mm=${minute}`)
 		} else {
 			alert("Por favor, preencha o título do timer")
 		}
